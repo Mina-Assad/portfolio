@@ -113,6 +113,34 @@
     a:hover {
       text-decoration: underline;
     }
+    .dropdown {
+    margin-bottom: 15px;
+    }
+
+    .dropdown-btn {
+      width: 100%;
+      background-color: var(--accent);
+      color: white;
+      padding: 10px;
+      border: none;
+      text-align: left;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .dropdown-btn:hover {
+      opacity: 0.9;
+    }
+
+    .dropdown-content {
+      display: none;
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      border-top: none;
+      border-radius: 0 0 6px 6px;
+      background-color: var(--bg);
+    }
   </style>
 </head>
 <body data-theme="light">
@@ -121,7 +149,7 @@
 
   <header>
     <h1>Mina Assad</h1>
-    <p>Engineer<!--- | Backend Developer | Cybersecurity Analyst ---></p>
+    <p>Engineer | Cybersecurity Analysis | Backend Developer</p>
   </header>
 
   <nav>
@@ -138,15 +166,25 @@
 
     <section id="about">
       <h2>About Me</h2>
-      <p>U.S. Citizen based in New York and graduate Electrical Engineering student with a strong foundation in engineering, computer systems, data analysis, and technical operations. Engineer-in-Training (EIT) with experience supporting system infrastructure, analyzing performance data, and maintaining structured documentation in fast-paced environments. Skilled in Excel, SQL, and backend systems, with the ability to translate complex technical information into clear, actionable insights. 
-        Brings a detail-oriented and analytical mindset to solving complex engineering problems, optimizing system performance, and improving operational efficiency across technical environments.</p>
+      <p>Graduate Electrical Engineering student and Engineer-in-Training (EIT) based in New York, with a strong foundation in engineering, cybersecurity, and programming. 
+        Experienced backend developer with hands-on experience supporting system infrastructure, analyzing performance data, and maintaining structured technical documentation in fast-paced environments. 
+        Proficient in Excel, SQL, and backend systems, with the ability to translate complex technical concepts into clear, actionable insights. 
+        Known for a detail-oriented and analytical approach to solving engineering problems, optimizing system performance, and improving operational efficiency.
+      </p>
     </section>
 
     <section id="education">
       <h2>Education</h2>
       <p class="education-degree">
+          <strong>Master in Electric Engineering</strong>
+      </p>
+      <p class="education-provider">
+        College of Staten Island, CUNY (Jananury 2026 – Present)
+      </p>
+
+      <p class="education-degree">
           <a href="https://www.parchment.com/u/award/5e8c5b7df9d3498ebee997c3d42ffc45" target="_blank">
-            B.Sc. in Engineering Science – Computer Engineering Specialization
+            <strong>B.Sc. in Engineering Science – Computer Engineering Specialization</strong>
           </a>
       </p>
       <p class="education-provider">
@@ -160,7 +198,7 @@
       
       <p class="education-degree">
           <a href="https://drive.google.com/file/d/1haT99CwcdBO-rNtgLIYXO-6WQL0KzPga/view?usp=sharing" target="_blank">
-            Cybersecurity Analyst Program
+            <strong>Cybersecurity Analyst Program</strong>
           </a>
       </p>
       <p class="education-provider">
@@ -200,32 +238,72 @@
 </section>
 
 <section id="skills">
-      <h2>Skills</h2>
+  <h2>Skills</h2>
+
+  <div class="dropdown">
+    <button class="dropdown-btn" onclick="toggleDropdown(this)">Engineering</button>
+    <div class="dropdown-content">
       <ul>
-        <li><strong>Programming:</strong> C/C++, Python, Assembly, Bash, PostgreSQL, HTML, PHP, JavaScript</li>
-        <li><strong>Tools:</strong> LabVIEW, Multisim, AutoCAD, Wireshark, Cisco Packet Tracer</li>
-        <li><strong>Concepts:</strong> Embedded Systems, Networking, OS & Servers, PCB Design</li>
-        <li><strong>Docs & Reporting:</strong> MS Word, Excel, PowerPoint, OneDrive, Google Drive</li>
-        <li><strong>Languages:</strong> Arabic (Native), English (Fluent)</li>
-        <li><strong>Qualities:</strong> Leadership, Time Management, Problem Solving, Creativity</li>
+        <li><strong>Electronics & Hardware:</strong> Circuit analysis and troubleshooting, Multimeter and oscilloscope operation, Sensor integration and calibration, Embedded systems fundamentals, PCB Design, Soldering</li>
+        <li><strong>Engineering & Infrastructure:</strong> Engineering design fundamentals and system analysis, Technical drawing and schematic interpretation, Field data collection and documentation, Engineering problem‑solving and troubleshooting</li>
+        <li><strong>Data & Documentation:</strong> Data entry and database record management, Technical report preparation and documentation, Workflow documentation and project record keeping, Data analysis and spreadsheet management</li>
+        <li><strong>Software Tools:</strong> Microsoft Office Suite(Excel, Word, PowerPoint, Teams), AutoCAD, MATLAB, LabVIEW, Git version control</li>
+        <li><strong>Programming Languages:</strong> Python, C/C++, Assembly, BASH scripting</li>
       </ul>
-    </section>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-btn" onclick="toggleDropdown(this)">Cybersecurity</button>
+    <div class="dropdown-content">
+      <ul>
+        <li><strong>Security Fundamentals:</strong> Network security principles, CIA triad, access control models, authentication and authorization, risk assessment and mitigation strategies</li>
+        <li><strong>Threat Detection & Analysis:</strong> Log analysis and monitoring, SIEM tools (Splunk), intrusion detection concepts, incident identification and response workflows</li>
+        <li><strong>Systems & Network Security:</strong> TCP/IP networking, firewalls, VPNs, secure system configuration, vulnerability scanning and basic penetration testing concepts</li>
+        <li><strong>Security Tools:</strong> Wireshark, Splunk, Nmap, Cisco Packet Tracer, basic use of security frameworks and monitoring tools</li>
+        <li><strong>Secure Development:</strong> Secure coding practices, backend security, authentication systems (JWT), encryption fundamentals, API security</li>
+        <li><strong>Data & Compliance:</strong> Security documentation, incident reporting, audit support, data protection practices, compliance awareness</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-btn" onclick="toggleDropdown(this)">Backend Development</button>
+    <div class="dropdown-content">
+      <ul>
+        <li><strong>Backend Systems:</strong> Design and development of server-side applications, RESTful API development, handling client-server architecture, and scalable backend solutions</li>
+        <li><strong>Database Management:</strong> PostgreSQL database design, query optimization, data modeling, CRUD operations, and structured data management</li>
+        <li><strong>Web Development:</strong> Flask framework development, API integration, session management, and backend logic implementation</li>
+        <li><strong>Authentication & Security:</strong> JWT-based authentication, secure login systems, password hashing, and basic encryption practices</li>
+        <li><strong>System Integration:</strong> Integration with system tools and services (e.g., job schedulers like Slurm), backend support for infrastructure systems</li>
+        <li><strong>Performance & Debugging:</strong> Debugging backend systems, analyzing performance bottlenecks, optimizing application efficiency and reliability</li>
+        <li><strong>Tools & Technologies:</strong> Python, Flask, PostgreSQL, Git version control, Linux environments</li>
+      </ul>
+    </div>
+  </div>
+
+  <p><strong>Professional Competencies:</strong> Analytical thinking, Engineering problem‑solving, Strong attention to detail, Ability to work independently with accountability, Cross‑functional collaboration, Clear written and verbal communication, Task prioritization and time management, Adaptability in technical environments
+</p>
+
+</section>
 
     <section id="experience">
       <h2>Work Experience</h2>
 
-      <p><strong>Backend Developer</strong> – High Performance Computing Center, CSI (Jan 2025 – Present)</p>
-      <ul>
-        <li>Developed Flask-based web apps with JWT and PostgreSQL</li>
-        <li>Implemented secure authentication and encryption protocols</li>
-        <li>Used PySlurm for HPC job scheduling and resource management</li>
-      </ul>
+      <p> <a href="https://hpchome.csi.cuny.edu/" target="_blank" ><strong>Backend Developer</strong></a> – High Performance Computing Center, CSI (Jan 2025 – Present)
+        <ul>
+          <li>Developed Flask-based web apps with JWT and PostgreSQL</li>
+          <li>Implemented secure authentication and encryption protocols</li>
+          <li>Used PySlurm for HPC job scheduling and resource management</li>
+        </ul>
+      </p>
 
-      <p><strong>STEM Tutor</strong> – College of Staten Island (Feb 2022 – Aug 2022)</p>
-      <ul>
-        <li>Tutored engineering, math, and physics courses</li>
-        <li>Adapted instruction to diverse student learning styles</li>
-      </ul>
+      <p><strong>STEM Tutor</strong> – College of Staten Island (Feb 2022 – Aug 2022)
+        <ul>
+          <li>Tutored engineering, math, and physics courses</li>
+          <li>Adapted instruction to diverse student learning styles</li>
+        </ul>
+      </p>
     </section>
 
     <section id="projects">
@@ -233,14 +311,41 @@
 
       <p>
         <a href="https://github.com/Mina-Assad/SelfDrivingCar" target="_blank">
-        <strong>Self-Driving Car</strong>
+          <strong>Self-Driving Car</strong>
         </a>
+        <span>(Senior Design Project)</span>
+        <ul>
+          <li>Designed and implemented an embedded control system enabling autonomous navigation using sensors and real‑time decision algorithms.</li>
+          <li>Developed navigation and obstacle detection algorithms in C++, integrating sensor input with motor control systems.</li>
+          <li>Designed system architecture and circuit layouts using AutoCAD and structured control flow models.</li>
+          <li>Conducted extensive system testing to evaluate performance, response timing, and obstacle avoidance reliability.</li>
+          <li>Analyzed experimental results to optimize navigation algorithms and improve control accuracy.</li>
+        </ul>
       </p>
-      <ul>
-        <li>Designed autonomous navigation system using AutoCAD and flowcharts</li>
-        <li>Programmed in C++ for real-time obstacle detection and control</li>
-        <li>Optimized system performance through iterative testing</li>
-      </ul>
+
+      <p>
+        <a href="https://github.com/Mina-Assad/zkpServer" target="_blank">
+          <strong>Zero‑Knowledge Proof Authentication System</strong>
+        </a>
+        <span>(Personal Project)</span>
+        <ul>
+          <li>Designed and implemented a Zero‑Knowledge Proof–based authentication system to explore alternatives to traditional identity verification systems such as Social Security Number‑based authentication.</li>
+          <li>Developed cryptographic authentication workflows in Python that verify user identity without revealing sensitive information.</li>
+          <li>Implemented secure verification protocols and tested system performance against traditional authentication models.</li>
+        </ul>
+      </p>
+
+      <p>
+          <strong>Sorting Algorithm Analysis</strong>(Data Structures Project)
+        <ul>
+          <li>Implemented multiple sorting algorithms in C++ and analyzed computational efficiency under varying dataset conditions.</li>
+          <li>Designed and executed performance benchmarking experiments using system timers to evaluate runtime performance.</li>
+          <li>Analyzed results and produced comparative performance reports, including charts and engineering evaluations.</li>
+          <li>Collaborated with a development team to integrate modular code and ensure consistency across implementations.</li>
+          <li>Prepared and delivered a technical presentation summarizing methodology, performance findings, and key insights.</li>
+        </ul>
+      </p>
+      
     </section>
 
 
@@ -255,7 +360,7 @@
   </div>
 
   <footer>
-    &copy; 2025 Mina Assad | New York
+    &copy; 2026 Mina Assad | New York
   </footer>
 
   <script>
@@ -263,6 +368,18 @@
       const body = document.body;
       const theme = body.getAttribute("data-theme");
       body.setAttribute("data-theme", theme === "dark" ? "light" : "dark");
+    }
+    function toggleDropdown(button) {
+      const content = button.nextElementSibling;
+      const isVisible = content.style.display === "block";
+
+      // Close all dropdowns
+      document.querySelectorAll(".dropdown-content").forEach(el => {
+        el.style.display = "none";
+      });
+
+      // Toggle current one
+      content.style.display = isVisible ? "none" : "block";
     }
   </script>
 </body>
